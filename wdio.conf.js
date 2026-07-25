@@ -25,6 +25,12 @@ export const config = {
         './test/specs/**/*.js'
     ],
     suites: {
+        scroll:[
+            './test/specs/scroll.e2e.js'
+        ],
+        login:[
+            './test/specs/login.e2e.js'
+        ]
 
     },
     // Patterns to exclude.
@@ -53,33 +59,19 @@ export const config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://saucelabs.com/platform/platform-configurator
     //
-    capabilities: {
-        /*
-        saucelabs: {
-            capabilities: {
-                platformName: 'Android',
-                'appium:app': 'storage:filename=ebacshop.aab', // The filename of the mobile app
-                'appium:deviceName': 'Google Pixel 6a Emulator',
-                'appium:platformVersion': '13.0',
-                'appium:automationName': 'UiAutomator2',
-            }
-        },
-        */
-        local: {
-            capabilities: {
-                "platformName": "Android",
-                "browserName": "Chorme",
-                "appium:options": {
-                    "automationName": "UiAutomator2",
-                    "platformVersion": "11.0",
-                    "app": "app/wdio/android.wdio.native.app.v2.2.0.apk",
-                    "deviceName": "nightwatch-android-11",
-                    "chromedriverAutodownload": true,
-                    "chromedriverExecutable": 'chromedriver-mobile/chromedriver.exe'
-                }
-            }
+
+    capabilities: [{
+        "platformName": "Android",
+        "appium:options": {
+            "automationName": "UiAutomator2",
+            "chromedriverAutodownload": true,
+            "deviceName": "nightwatch-android-11",
+            "platformVersion": "11.0",
+            "app": "app/wdio/wdio.apk",
+            "chromedriverExecutable": 'chromedriver-mobile/chromedriver.exe'
         }
-    },
+    }],
+
 
     //
     // ===================
