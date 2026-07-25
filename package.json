@@ -12,7 +12,8 @@
   "scripts": {
     "test": "wdio run ./wdio.conf.js",
     "login:test":"wdio run ./wdio.conf.js --suite login",
-    "scroll:test":"wdio run ./wdio.conf.js --suite scroll"
+    "scroll:test":"wdio run ./wdio.conf.js --suite scroll",
+    "form:test":"wdio run ./wdio.conf.js --suite form"
   },
   "dependencies": {
     "dotenv": "^17.4.2"

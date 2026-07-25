@@ -10,6 +10,9 @@ class Home{
     };
     get btnScroll(){
         return $('//android.widget.Button[@content-desc="Swipe"]')
+    };
+    get btnForm(){
+        return $('//android.widget.Button[@content-desc="Forms"]')
     }
 
     async acessarLogin(){
@@ -19,6 +22,10 @@ class Home{
     async acessarScroll(){
         await this.btnScroll.waitForExist()
         await this.btnScroll.click()
+    }
+    async acessarForm(){
+        await this.btnForm.waitForExist()
+        await this.btnForm.click()
     }
 }
 

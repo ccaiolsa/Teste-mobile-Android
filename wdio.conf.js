@@ -30,6 +30,9 @@ export const config = {
         ],
         login:[
             './test/specs/login.e2e.js'
+        ],
+        form:[
+            './test/specs/form.e2e.js'
         ]
 
     },

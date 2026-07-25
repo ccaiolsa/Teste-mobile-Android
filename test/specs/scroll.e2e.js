@@ -1,4 +1,4 @@
-import { $, browser, expect } from '@wdio/globals'
+import { $, browser } from '@wdio/globals'
 import home from '../pageobjects/home.page.js'
 import scroll from '../pageobjects/scroll.page.js'
 
@@ -13,8 +13,11 @@ describe('Funcionalidade carrosel', () => {
 
 
     it('Deve rolar o carrosel para a esquerda', async () => {
+        let desc = 'GREAT COMMUNITY'
+
         await home.acessarScroll()
-        await scroll.texto("SUPPORT VIDEOS")
+        await scroll.horizontal(desc)
+        await expect($(`//android.widget.TextView[@text="${desc}"]`)).toBeDisplayed()
 
     });
 
