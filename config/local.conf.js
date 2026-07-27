@@ -5,6 +5,7 @@ export const localConf = {
     ...generalConf,
     runner: 'local',
     port: 4723,
+    services: ['appium'],
     capabilities: process.env.PLATFORM === 'Android'? [
         {
             "platformName": "Android",

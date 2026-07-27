@@ -10,7 +10,6 @@ export const generalConf ={
     waitforTimeout: 10000,
     connectionRetryTimeout: 120000,
     connectionRetryCount: 3,
-    services: ['appium'],
     framework: 'mocha',
     mochaOpts: {
         ui: 'bdd',
