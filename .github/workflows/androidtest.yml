@@ -16,7 +16,7 @@ jobs:
                 node-version: '24'
 
            - name: Install Dependencies
-             run: npm i
+             run: npm install
            - name: Run Test
              run: npm run test:report
            - name: Debug environment
