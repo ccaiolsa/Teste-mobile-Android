@@ -18,7 +18,7 @@ jobs:
            - name: Install Dependencies
              run: npm i
            - name: Run Test
-             run: npm test:report
+             run: npm run test:report
            - name: Publish Report
              uses: peaceiris/actions-github-pages@v3.1.12
              if: always()
