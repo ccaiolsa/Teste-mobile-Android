@@ -23,6 +23,8 @@ jobs:
               ENVIRONMENT: sauceLabs
               PLATFORM: Android
               REPORTER: true
+              SAUCE_USER: ${{env.SAUCE_USER}}
+              SAUCE_KEY: ${{env.SAUCE_KEY}}
              run: npm run test:report
            - name: Publish Report
              uses: peaceiris/actions-github-pages@v3.1.12
