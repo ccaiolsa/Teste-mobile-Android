@@ -27,7 +27,7 @@ jobs:
               SAUCE_KEY: ${{secrets.SAUCE_KEY}}
              run: npm run test:report
            - name: Publish Report
-             uses: peaceiris/actions-github-pages@v4
+             uses: peaceiris/actions-github-pages@v3.1.12
              if: always()
              with:
                 github_token: ${{secrets.GITHUB_TOKEN}}
