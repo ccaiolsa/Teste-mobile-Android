@@ -1,12 +1,6 @@
 import 'dotenv/config'
 import {localConf} from './local.conf.js'
 import {sauceConf} from './sauce.conf.js'
-console.log('ENVIRONMENT =', process.env.ENVIRONMENT)
-    const cfg = getConf()
-
-console.log(cfg)
-
-export const config = cfg
 
 function getConf(){
     

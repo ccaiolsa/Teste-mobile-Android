@@ -18,12 +18,11 @@ jobs:
            - name: Install Dependencies
              run: npm install
            - name: Run Test
+             env:
+              ENVIRONMENT: local
+              PLATFORM: Android
+              REPORTER: true
              run: npm run test:report
-           - name: Debug environment
-             run: |
-                echo "ENVIRONMENT=$ENVIRONMENT"
-                echo "PLATFORM=$PLATFORM"
-                echo "SAUCE_USER=$SAUCE_USER"
            - name: Publish Report
              uses: peaceiris/actions-github-pages@v3.1.12
              if: always()
