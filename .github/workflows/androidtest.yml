@@ -19,6 +19,8 @@ jobs:
              run: npm i
            - name: Run Test
              run: npm run test:report
+             env:
+              ENVIRONMENT: local
            - name: Publish Report
              uses: peaceiris/actions-github-pages@v3.1.12
              if: always()
