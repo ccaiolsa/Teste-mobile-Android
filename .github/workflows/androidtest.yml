@@ -13,7 +13,7 @@ jobs:
            - uses: actions/setup-node@v4
 
              with:
-                node-version: '24'
+                node-version: '20'
 
            - name: Install Dependencies
              run: npm install
@@ -23,12 +23,12 @@ jobs:
               ENVIRONMENT: sauceLabs
               PLATFORM: Android
               REPORTER: true
-              SAUCE_USER: ${{env.SAUCE_USER}}
-              SAUCE_KEY: ${{env.SAUCE_KEY}}
+              SAUCE_USER: ${{secrets.SAUCE_USER}}
+              SAUCE_KEY: ${{secrets.SAUCE_KEY}}
              run: npm run test:report
            - name: Publish Report
              uses: peaceiris/actions-github-pages@v3.1.12
              if: always()
              with:
-                github_token: $${{secrets.GITHUB_TOKEN}}
+                github_token: ${{secrets.GITHUB_TOKEN}}
                 publish_dir: ./allure-report
