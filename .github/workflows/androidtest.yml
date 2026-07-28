@@ -19,8 +19,11 @@ jobs:
              run: npm i
            - name: Run Test
              run: npm run test:report
-             env:
-              ENVIRONMENT: local
+           - name: Debug environment
+             run: |
+                echo "ENVIRONMENT=$ENVIRONMENT"
+                echo "PLATFORM=$PLATFORM"
+                echo "SAUCE_USER=$SAUCE_USER"
            - name: Publish Report
              uses: peaceiris/actions-github-pages@v3.1.12
              if: always()
