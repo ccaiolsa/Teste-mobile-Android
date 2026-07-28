@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","36018","Deve preencher formulário","Funcionalidade preencher formulário","2026-07-28","passed","2026-07-28","","","",""
+"","14764","Realizar login com sucesso","Funcionalidade login","2026-07-28","passed","2026-07-28","","","",""
+"","28103","Credenciar novo usuário com sucesso","Funcionalidade login","2026-07-28","passed","2026-07-28","","","",""
+"","10365","Deve rolar o carrosel para a esquerda","Funcionalidade carrosel","2026-07-28","passed","2026-07-28","","","",""
