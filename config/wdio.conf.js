@@ -8,6 +8,8 @@ function getConf(){
             return localConf
         case 'sauceLabs':
             return sauceConf
+        default:
+            return localConf
             
     }
 
