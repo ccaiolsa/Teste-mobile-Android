@@ -11,12 +11,14 @@
   },
   "scripts": {
     "test": "wdio run ./config/wdio.conf.js",
+    "test:report": "npm run test && npm run report",
     "report": "allure generate allure-results --clean -o allure-report",
-    "login:report":"npm run test --suite login && npm run report",
-    "form:report":"npm run test --suite form && npm run report",
-    "scroll:report":"npm run test --suite scroll && npm run report"
+    "login:report": "npm run test --suite login && npm run report",
+    "form:report": "npm run test --suite form && npm run report",
+    "scroll:report": "npm run test --suite scroll && npm run report"
   },
   "dependencies": {
+    "allure-commandline": "^2.43.0",
     "dotenv": "^17.4.2"
   }
 }
