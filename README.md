@@ -90,13 +90,16 @@ npx allure open
 
 ## 🔄 Pipeline CI/CD
 
-A pipeline, definida na branch `ci`, executa os testes no GitHub Actions e publica os relatórios resultantes na branch `report`.
+A pipeline, definida na branch `ci`, é disparada a cada **push** nessa branch. Ela executa os testes na nuvem da **Sauce Labs** e publica os relatórios Allure resultantes na branch `report`.
 
-[Descreva em 1 ou 2 linhas o gatilho: push, pull request, agendamento...]
+### 🔑 Configuração dos secrets
 
-## 📸 Evidências
+Para replicar o projeto, cadastre os secrets abaixo no seu repositório em **Settings → Secrets and variables → Actions**:
 
-> Adicione aqui um print do relatório Allure ou um GIF da execução no emulador.
+| Secret | Descrição |
+|---|---|
+| `SAUCE_USER` | Seu nome de usuário da Sauce Labs |
+| `SAUCE_KEY` | Sua Access Key da Sauce Labs |
 
 ---
 
